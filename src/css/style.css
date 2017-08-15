@@ -18,8 +18,6 @@ nav {
   width: 95%;
   margin: auto;
   height: 7.5rem;
-  display: flex;
-  align-items: center;
 
   & ul {
     width: 75%;
@@ -174,9 +172,14 @@ main {
   }
 }
 
+.agenda-detail-link {
+  text-decoration: none;
+}
+
 .agenda-items {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 5rem 0;
 }
 
@@ -227,12 +230,8 @@ main {
   }
 }
 
-.nieuws {
-  display: flex;
-  margin: 3rem 0;
-}
-
 .blog-article {
+  margin: 3rem 0;
   display: flex;
 
   & h2 {
@@ -243,7 +242,7 @@ main {
   }
 
   & p {
-    width: 45%;
+    width: 40%;
     line-height: 2rem;
   }
 }
@@ -304,4 +303,48 @@ strong {
 
 .footer-fb {
   width: 16%;
+}
+
+.detail-breadcrumbs {
+  color: var(--spekken-pink);
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.breadcrumb {
+  text-decoration: none;
+}
+
+.detail-top-flex {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-praktisch {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(to top right, #e9e896, #44eff2);
+  color: transparent;
+  background-clip: text;
+}
+
+.detail-title {
+  color: var(--spekken-pink);
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.detail-description a {
+  color: var(--spekken-pink);
+  font-weight: bold;
 }
