@@ -6,7 +6,6 @@ const {UglifyJsPlugin} = webpack.optimize;
 
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
 const ExtractTextWebpackPlugin = require(`extract-text-webpack-plugin`);
-const configHtmls = require(`webpack-config-htmls`)();
 
 const {getIfUtils, removeEmpty} = require(`webpack-config-utils`);
 const {ifProduction, ifDevelopment} = getIfUtils(process.env.NODE_ENV);
@@ -32,7 +31,7 @@ const config = {
   entry: removeEmpty([
     `./src/css/style.css`,
     `./src/js/script.js`,
-    ifDevelopment(...configHtmls.entry)
+    // ifDevelopment(...configHtmls.entry)
   ]),
 
   resolve: {
@@ -45,7 +44,7 @@ const config = {
 
   output: {
     path: path.join(__dirname, `dist`),
-    filename: `js/[name].[hash].js`,
+    filename: `js/[name].js`,
     publicPath
   },
 
@@ -164,7 +163,7 @@ const config = {
 
   plugins: removeEmpty([
 
-    ...configHtmls.plugins,
+    // ...configHtmls.plugins,
 
     ifDevelopment(new HotModuleReplacementPlugin()),
 
@@ -183,5 +182,7 @@ const config = {
   ])
 
 };
+
+console.log(config.entry);
 
 module.exports = config;

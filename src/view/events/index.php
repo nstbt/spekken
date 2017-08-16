@@ -6,6 +6,7 @@
       <li><a class="nav-item" href="#">Praktisch</a></li>
       <li><a class="nav-item" href="#">Nieuws</a></li>
     </ul>
+    <input type="text" class="nav-search" placeholder="Zoeken...">
   </nav>
   <div class="header-image">
     <h1 class="hidden">Spekken</h1>
@@ -33,38 +34,38 @@
     <div class="agenda-items">
       <a class="agenda-detail-link" href="index.php?page=detail&amp;id=<?php echo $event1["id"]; ?>">
         <article class="agenda-item">
-          <h2 class="agenda-item-title"><?php echo $event1["title"]; ?></h2>
-          <p class="agenda-item-info"><?php echo $event1['start_age']; ?> tot <?php echo $event1['end_age']; ?> jaar</p>
           <?php $date = date_parse($event1['start']);?>
           <p class="agenda-item-date"><?php echo $date['day'] . '/' . $date['month']; ?></p>
-          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event1['image'] ?>.png" alt="<?php echo $event1["title"]; ?>" width="320" heigth="315">
+          <h2 class="agenda-item-title"><?php echo $event1["title"]; ?></h2>
+          <p class="agenda-item-info"><?php echo $event1['start_age']; ?> tot <?php echo $event1['end_age']; ?> jaar</p>
+          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event1['image'] ?>.png" alt="<?php echo $event1["title"]; ?>" width="316" heigth="316">
         </article>
       </a>
       <a class="agenda-detail-link" href="index.php?page=detail&amp;id=<?php echo $event2["id"]; ?>">
         <article class="agenda-item">
-          <h2 class="agenda-item-title"><?php echo $event2["title"]; ?></h2>
-          <p class="agenda-item-info"><?php echo $event2['start_age']; ?> tot <?php echo $event2['end_age']; ?> jaar</p>
           <?php $date = date_parse($event2['start']);?>
           <p class="agenda-item-date"><?php echo $date['day'] . '/' . $date['month']; ?></p>
-          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event2['image'] ?>.png" alt="<?php echo $event2["title"]; ?>" width="320" heigth="315">
+          <h2 class="agenda-item-title"><?php echo $event2["title"]; ?></h2>
+          <p class="agenda-item-info"><?php echo $event2['start_age']; ?> tot <?php echo $event2['end_age']; ?> jaar</p>
+          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event2['image'] ?>.png" alt="<?php echo $event2["title"]; ?>" width="316" heigth="316">
         </article>
       </a>
       <a class="agenda-detail-link" href="index.php?page=detail&amp;id=<?php echo $event3["id"]; ?>">
         <article class="agenda-item">
-          <h2 class="agenda-item-title"><?php echo $event3["title"]; ?></h2>
-          <p class="agenda-item-info"><?php echo $event3['start_age']; ?> tot <?php echo $event3['end_age']; ?> jaar</p>
           <?php $date = date_parse($event3['start']);?>
           <p class="agenda-item-date"><?php echo $date['day'] . '/' . $date['month']; ?></p>
-          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event3['image'] ?>.png" alt="<?php echo $event3["title"]; ?>" width="320" heigth="315">
+          <h2 class="agenda-item-title"><?php echo $event3["title"]; ?></h2>
+          <p class="agenda-item-info"><?php echo $event3['start_age']; ?> tot <?php echo $event3['end_age']; ?> jaar</p>
+          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event3['image'] ?>.png" alt="<?php echo $event3["title"]; ?>" width="316" heigth="316">
         </article>
       </a>
       <a class="agenda-detail-link" href="index.php?page=detail&amp;id=<?php echo $event4["id"]; ?>">
         <article class="agenda-item">
-          <h2 class="agenda-item-title"><?php echo $event4["title"]; ?></h2>
-          <p class="agenda-item-info"><?php echo $event4['start_age']; ?> tot <?php echo $event4['end_age']; ?> jaar</p>
           <?php $date = date_parse($event4['start']);?>
           <p class="agenda-item-date"><?php echo $date['day'] . '/' . $date['month']; ?></p>
-          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event4['image'] ?>.png" alt="<?php echo $event4["title"]; ?>" width="320" heigth="315">
+          <h2 class="agenda-item-title"><?php echo $event4["title"]; ?></h2>
+          <p class="agenda-item-info"><?php echo $event4['start_age']; ?> tot <?php echo $event4['end_age']; ?> jaar</p>
+          <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event4['image'] ?>.png" alt="<?php echo $event4["title"]; ?>" width="316" heigth="316">
         </article>
       </a>
     </div>
@@ -96,7 +97,7 @@
           <a href="#">Meer nieuwsberichten</a>
         </div>
       </div>
-      <img class="blogpicture" src="assets/img/blog_article.png" alt="voorstelling toverdrank" width="320" height="315" />
+      <img class="blogpicture" src="assets/img/blog_article.png" alt="voorstelling toverdrank" width="438" height="438" />
     </article>
   </section>
 </main>

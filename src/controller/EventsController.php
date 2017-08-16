@@ -26,6 +26,13 @@ class EventsController extends Controller {
   }
 
   public function agenda() {
+    $tags = $this->eventDAO->selectTags();
+    $this->set('tags', $tags);
+
+    $this->search();
+  }
+
+  public function search() {
     $conditions = array();
 
     //example: search on title

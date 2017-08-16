@@ -121,4 +121,11 @@ class EventDAO extends DAO {
     return $tagsByEventId;
   }
 
+  public function selectTags() {
+    $sql = "SELECT * FROM ma3_spekken_tags";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
 }

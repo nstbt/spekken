@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Spekken</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- <?php echo $css;?> -->
-    <link rel="stylesheet" href="/css/reset.css">
+    <?php echo $css;?>
+    <!-- <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/vars.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
 
