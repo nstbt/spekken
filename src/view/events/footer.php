@@ -8,7 +8,7 @@
     </div>
     <section class="footer-fb">
       <h2>Sociale media</h2>
-      <p>Volg Spekken op <a class="fbLink" href="https://www.facebook.com/Spekken/" target="_blank">Facebook</a> en blijf altijd op de hoogte</p>
+      <p><a class="fbLink" href="https://www.facebook.com/Spekken/" target="_blank">Facebook</a></p>
     </section>
     <section class="footer-nav">
       <h2 class="hidden">Navigatie</h2>

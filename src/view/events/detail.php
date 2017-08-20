@@ -1,12 +1,14 @@
 <header>
   <nav>
-    <ul>
-      <li><a href="index.php"><img src="./assets/img/logo.png" alt="spekken logo" width="482" height="45"></a></li>
-      <li><a class="nav-item" href="index.php?page=agenda">Agenda</a></li>
-      <li><a class="nav-item" href="#">Praktisch</a></li>
-      <li><a class="nav-item" href="#">Nieuws</a></li>
-    </ul>
-    <input type="text" class="nav-search" placeholder="Zoeken...">
+    <div class="nav">
+      <ul>
+        <li><a href="index.php"><img src="./assets/img/logo.png" alt="spekken logo" width="482" height="45"></a></li>
+        <li><a class="nav-item" href="index.php?page=agenda">Agenda</a></li>
+        <li><a class="nav-item" href="#">Praktisch</a></li>
+        <li><a class="nav-item" href="#">Nieuws</a></li>
+      </ul>
+      <input type="text" class="nav-search" placeholder="Zoeken...">
+    </div>
   </nav>
 
 </header>

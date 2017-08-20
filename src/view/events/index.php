@@ -1,22 +1,24 @@
 <header>
   <nav>
-    <ul>
-      <li><a href="index.php"><img src="./assets/img/logo.png" alt="spekken logo" width="482" height="45"></a></li>
-      <li><a class="nav-item" href="index.php?page=agenda">Agenda</a></li>
-      <li><a class="nav-item" href="#">Praktisch</a></li>
-      <li><a class="nav-item" href="#">Nieuws</a></li>
-    </ul>
-    <input type="text" class="nav-search" placeholder="Zoeken...">
+    <div class="nav">
+      <ul>
+        <li><a href="index.php"><img src="./assets/img/logo.png" alt="spekken logo" width="482" height="45"></a></li>
+        <li><a class="nav-item" href="index.php?page=agenda">Agenda</a></li>
+        <li><a class="nav-item" href="#">Praktisch</a></li>
+        <li><a class="nav-item" href="#">Nieuws</a></li>
+      </ul>
+      <input type="text" class="nav-search" placeholder="Zoeken...">
+    </div>
   </nav>
   <div class="header-image">
-    <h1 class="hidden">Spekken</h1>
+    <h1 class="header-title">Spekken</h1>
     <p class="hidden">Het meest kakelbonte kinderfestival</p>
   </div>
 
 </header>
 
 <main>
-  <section class="info">
+  <section class="info nobanner">
     <h2 class="hidden">Over</h2>
     <article class="over-tagline">
       <h2 class="hidden">Spekken</h2>
@@ -74,7 +76,7 @@
     </div>
   </section>
 
-  <section class="info">
+  <section class="info pinkbanner">
     <h2 class="hidden">Over</h2>
     <article class="over-spekken">
       <h2>Spekken</h2>
@@ -83,7 +85,8 @@
     </article>
     <article class="over-facebook">
       <h2 class="hidden">Sociale media</h2>
-      <p>Houd <a class="fbLink" href="https://www.facebook.com/Spekken/" target="_blank">onze Facebook pagina</a>  in de gaten en blijf op de hoogte van onze laatste nieuwtjes en acties!</p>
+      <p>Volg ons op sociale media en blijf op de hoogte van onze laatste nieuwtjes en acties!</p>
+      <a href="https://www.facebook.com/Spekken/" target="_blank"><img src="./assets/img/fblink.png" alt="facebook logo" width="286" height="63"><span class="hidden">onze Facebook pagina</span></a>
     </article>
   </section>
 
@@ -92,7 +95,8 @@
     <article class="blog-article">
       <div>
         <h2>Voorstelling Toverdrank</h2>
-        <p>Vandaag onze laatste spekkenvoorstelling van dit jaar: Joris en de geheimzinnige toverdrank van Theater De Kreet. Een bewerking naar het gelijknamige boek van Roald Dahl die dit jaar honderd zou zijn geworden en duidelijk nog niets van zijn aantrekkingskracht is verloren.</p>
+        <p>Vandaag onze laatste spekkenvoorstelling van dit jaar: Joris en de geheimzinnige toverdrank van Theater De Kreet. Een bewerking naar het gelijknamige boek van Roald Dahl die dit jaar honderd zou zijn geworden en duidelijk nog niets van zijn aantrekkingskracht is verloren.
+        <a class="blog-article-link" href="#">Lees verder...</a></p>
         <div class="blog-link">
           <a href="#">Meer nieuwsberichten</a>
         </div>

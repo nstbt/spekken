@@ -1,12 +1,14 @@
 <header>
   <nav>
-    <ul>
-      <li><a href="index.php"><img src="./assets/img/logo.png" alt="spekken logo" width="482" height="45"></a></li>
-      <li><a class="nav-item" href="index.php?page=agenda">Agenda</a></li>
-      <li><a class="nav-item" href="#">Praktisch</a></li>
-      <li><a class="nav-item" href="#">Nieuws</a></li>
-    </ul>
-    <input type="text" class="nav-search" placeholder="Zoeken...">
+    <div class="nav">
+      <ul>
+        <li><a href="index.php"><img src="./assets/img/logo.png" alt="spekken logo" width="482" height="45"></a></li>
+        <li><a class="nav-item" href="index.php?page=agenda">Agenda</a></li>
+        <li><a class="nav-item" href="#">Praktisch</a></li>
+        <li><a class="nav-item" href="#">Nieuws</a></li>
+      </ul>
+      <input type="text" class="nav-search" placeholder="Zoeken...">
+    </div>
   </nav>
 
 </header>
@@ -37,12 +39,16 @@
         <p class="agenda-item-date"><?php echo $date['day'] . '/' . $date['month']; ?></p>
         <header><h2 class="agenda-item-title"><?php echo $event['title']; ?></h2></header>
         <p class="agenda-item-info"><?php echo $event['start_age'];?> tot <?php echo $event['end_age'];?> jaar</p>
-        <p class="agenda-item-info"><?php foreach($event['tags'] as $tag): ?><?php echo $tag['tag'] . ' ';?><?php endforeach;?></p>
-        <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event['image'] ?>.png" alt="<?php echo $event['title'] ?>" width="316" heigth="316">
+        <p class="agenda-item-info">
+            <?php foreach($event['tags'] as $tag): ?>
+                <?php echo $tag['tag'] . ' ';?>
+            <?php endforeach;?>
+        </p>
+        <img class="agenda-item-img" src="./assets/img/events/small/<?php echo $event['image'] ?>.png" alt="<?php echo $event['title'] ?>" width="316" heigth="316" />
         <div class="agenda-item-link">
           <a href="index.php?page=detail&amp;id=<?php echo $event["id"]; ?>">Meer</a>
         </div>
       </article>
-    <? endforeach;?>
+    <?php endforeach;?>
   </section>
 </main>
