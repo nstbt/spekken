@@ -12,14 +12,14 @@
     </section>
     <section class="footer-nav">
       <h2 class="hidden">Navigatie</h2>
-      <article class="">
+      <article class="footer-nav-section">
         <h2 class="footer-nav-title">Agenda</h2>
         <ul>
-          <li><a class="footer-nav-item" href="#">Kerstvakantie</a></li>
-          <li><a class="footer-nav-item" href="#">Paasvakantie</a></li>
+          <li><a class="footer-nav-item" href="index.php?page=agenda&amp;id=1">Kerstvakantie</a></li>
+          <li><a class="footer-nav-item" href="index.php?page=agenda&amp;id=2">Paasvakantie</a></li>
         </ul>
       </article>
-      <article class="">
+      <article class="footer-nav-section">
         <h2 class="footer-nav-title">Praktisch</h2>
         <ul>
           <li><a class="footer-nav-item" href="#">Wat is Spekken</a></li>
@@ -27,7 +27,7 @@
           <li><a class="footer-nav-item" href="#">Tickets</a></li>
         </ul>
       </article>
-      <article class="">
+      <article class="footer-nav-section">
         <h2 class="footer-nav-title">Nieuws</h2>
         <ul>
           <li><a class="footer-nav-item" href="#">Blog</a></li>

@@ -29,8 +29,93 @@ class EventsController extends Controller {
     $tags = $this->eventDAO->selectTags();
     $this->set('tags', $tags);
 
-    $this->search();
+    $id = $_GET['id'];
+    $this->searchOnPeriod( $id );
+
+    if ( isset( $_GET['tag'] ) ) {
+      $tag = $_GET['tag'];
+      $this->searchOnTag( $id, $tag );
+    }
+
+    if ( isset( $_GET['start_age'] ) && isset( $_GET['end_age'] ) ) {
+      $startAge = $_GET['start_age'];
+      $endAge = $_GET['end_age'];
+      $this->searchOnAge( $id, $startAge, $endAge );
+    }
   }
+
+  private function searchOnPeriod( $id ) {
+    $conditions = array();
+
+    $conditions[0] = array(
+      'field' => 'period',
+      'comparator' => '=',
+      'value' => $id
+    );
+
+    $events = $this->eventDAO->search($conditions);
+
+    if( !$events ){
+      $_SESSION["error"] = 'Er zijn geen events deze periode';
+    }
+
+    $this->set('events', $events);
+  }
+
+  private function searchOnTag( $id, $tag ) {
+    $conditions = array();
+
+    $conditions[0] = array(
+      'field' => 'period',
+      'comparator' => '=',
+      'value' => $id
+    );
+
+    $conditions[1] = array(
+      'field' => 'tag',
+      'comparator' => '=',
+      'value' => $tag
+    );
+
+    $events = $this->eventDAO->search($conditions);
+
+    if( !$events ){
+      $_SESSION["error"] = 'Er zijn geen events teruggevonden met deze tag';
+    }
+
+    $this->set('events', $events);
+  }
+
+  private function searchOnAge( $id, $startAge, $endAge ) {
+    $conditions = array();
+
+    $conditions[0] = array(
+      'field' => 'period',
+      'comparator' => '=',
+      'value' => $id
+    );
+
+    $conditions[1] = array(
+      'field' => 'start_age',
+      'comparator' => '<=',
+      'value' => $startAge
+    );
+
+    $conditions[2] = array(
+      'field' => 'end_age',
+      'comparator' => '>=',
+      'value' => $endAge
+    );
+
+    $events = $this->eventDAO->search($conditions);
+
+    if( !$events ){
+      $_SESSION["error"] = 'Er zijn geen events teruggevonden met deze leeftijdsgroep';
+    }
+
+    $this->set('events', $events);
+  }
+
 
   public function search() {
     $conditions = array();
@@ -78,16 +163,16 @@ class EventsController extends Controller {
     // );
 
     //example: events in december - januari
-    $conditions[] = array(
-      'field' => 'start',
-      'comparator' => '>=',
-      'value' => '2017-12-01 00:00:00'
-    );
-    $conditions[] = array(
-      'field' => 'start',
-      'comparator' => '<',
-      'value' => '2018-01-31 23:59:59'
-    );
+    // $conditions[] = array(
+    //   'field' => 'start',
+    //   'comparator' => '>=',
+    //   'value' => '2017-12-01 00:00:00'
+    // );
+    // $conditions[] = array(
+    //   'field' => 'start',
+    //   'comparator' => '<',
+    //   'value' => '2018-01-31 23:59:59'
+    // );
 
     //example: events in april
     // $conditions[] = array(
@@ -142,6 +227,10 @@ class EventsController extends Controller {
 
     $id = $_GET['id'];
     $event = $this->eventDAO->selectById( $id );
+
+    if( !$event ){
+      $_SESSION["error"] = 'Dit event bestaat niet';
+    }
 
     $this->set('event', $event);
   }

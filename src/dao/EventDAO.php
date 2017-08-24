@@ -89,6 +89,20 @@ class EventDAO extends DAO {
     $stmt->bindValue(':id', $id);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
+    // $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    // if(empty($result)) {
+    //   return $result;
+    // }
+    // $eventIds = $this->_getEventIdsFromResult($result);
+    // $tagsByEventId = $this->_getTagsForEventIds($eventIds);
+    // //handle the tags & locations in the foreach loop - we want to see all tags for a given event
+    // foreach($result as &$row) {
+    //   $row['tags'] = array();
+    //   if(!empty($tagsByEventId[$row['id']])) {
+    //     $row['tags'] = $tagsByEventId[$row['id']];
+    //   }
+    // }
+    // return $result;
   }
 
   private function _getEventIdsFromResult(&$result) {
